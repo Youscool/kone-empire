@@ -1,0 +1,30 @@
+{
+  "produits": [
+    {
+      "id": "1",
+      "title": "One piece",
+      "description": "Animé sur la piratérie, Monkey D Luffy est un jeune pirate qui reve de dévenir le roi des pirates et pour cela il va devoir explorer le monde et se fronter à des ménances collosal",
+      "category": "Aventure",
+      "date": "2025-09-17"
+    },
+    {
+      "id": "2",
+      "title": "Naruto",
+      "description": "Notre protagoniste Naruto est un ninja Genin qui reve de devenir HOKAGE et il abrite en plus un démon renard.",
+      "category": "Shonen",
+      "date": "2025-09-17"
+    },
+    {
+      "id": 509,
+      "title": "Jujutsu Kaisen",
+      "description": "Exhorsiste puissant",
+      "date": "2025-09-26T17:44:47.250Z"
+    },
+    {
+      "id": 781,
+      "title": "Jujutsu Kaisen",
+      "description": "Exhorsiste puissant",
+      "date": "2025-09-26T17:46:15.955Z"
+    }
+  ]
+}
