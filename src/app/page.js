@@ -1,5 +1,17 @@
+"use client"
+import { useEffect, useState } from "react";
+import HomePage from "./components/Page/Home";
+import Loader from "./components/loading/Loading";
 
-import HomePage from "./components/Page/Home"
+
 export default function Page() {
-  return <HomePage/>
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
+  return <>
+  { loading ? <Loader/> : <HomePage/>}
+  </>
 }

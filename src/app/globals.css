@@ -19,7 +19,7 @@
 }
 
 .selected {
-    color: var(--color-blue);
+    color: var(--color-green);
 }
 
 body {
@@ -227,19 +227,50 @@ a {
             align-items: center;
 }
 
-.menu li {
-    float: left;
-    margin-left: 30px;
-}
+ /* Animation du toggle */
+        .rotate-in {
+          animation: rotateIn 0.4s ease forwards;
+        }
+        .rotate-out {
+          animation: rotateOut 0.4s ease forwards;
+        }
+        @keyframes rotateIn {
+          from { transform: rotate(-180deg); opacity: 0; }
+          to { transform: rotate(0deg); opacity: 1; }
+        }
+        @keyframes rotateOut {
+          from { transform: rotate(180deg); opacity: 0; }
+          to { transform: rotate(0deg); opacity: 1; }
+        }
 
-.menu li a {
-    color: var(--color-white);
-}
+        /* Menu slide mobile */
+        .show-menu {
+          display: block !important;
+          animation: slideDown 0.4s ease forwards;
+        }
+        @keyframes slideDown {
+          from { transform: translateY(-20px); opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
+        }
 
-.menu li a:hover {
-    color: var(--color-green);
-}
-
+        /* Lien hover */
+        .nav-link {
+          position: relative;
+          transition: color 0.3s ease;
+        }
+        .nav-link::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -3px;
+          width: 0%;
+          height: 2px;
+          background: var(--color-green);
+          transition: 0.3s ease;
+        }
+        .nav-link:hover::after {
+          width: 100%;
+        }
 
 /**************************************
 *
@@ -250,9 +281,9 @@ a {
 
 .wrapper-header-img {
     height: 750px;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.7)), to(rgb(17, 17, 17, 0.7))),  url('../images/bg-header.png');
-    background-image: -o-linear-gradient(rgba(17, 17, 17, 0.7), rgb(17, 17, 17, 0.7)),  url('../images/bg-header.png');
-    background-image: linear-gradient(rgba(17, 17, 17, 0.7), rgb(17, 17, 17, 0.7)),  url('../images/bg-header.png');
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.7)), to(rgb(17, 17, 17, 0.7))),  url('/images/bg-header.png');
+    background-image: -o-linear-gradient(rgba(17, 17, 17, 0.7), rgb(17, 17, 17, 0.7)),  url('/images/bg-img.webp');
+    background-image: linear-gradient(rgba(17, 17, 17, 0.7), rgb(17, 17, 17, 0.7)),  url('/images/bg-img.webp');
     background-repeat: no-repeat;
     background-position: left top;
     background-size: cover;
@@ -639,9 +670,9 @@ a {
 
 
 #pricing {
-    background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(91, 200, 109, 0.8)), to(rgba(91, 200, 109, 0.8))),  url('../images/bg-pricing.png');
-    background-image:-o-linear-gradient(rgba(91, 200, 109, 0.8), rgba(91, 200, 109, 0.8)),  url('../images/bg-pricing.png');
-    background-image:linear-gradient(rgba(91, 200, 109, 0.8), rgba(91, 200, 109, 0.8)),  url('../images/bg-pricing.png');
+    background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(91, 200, 109, 0.8)), to(rgba(91, 200, 109, 0.8))),  url('/images/bg-pricing.png');
+    background-image:-o-linear-gradient(rgba(91, 200, 109, 0.8), rgba(91, 200, 109, 0.8)),  url('/images/bg-pricing.png');
+    background-image:linear-gradient(rgba(91, 200, 109, 0.8), rgba(91, 200, 109, 0.8)),  url('/images/bg-pricing.png');
     background-repeat: no-repeat;
     background-position: left top;
     background-size: cover;
