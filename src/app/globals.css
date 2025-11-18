@@ -285,7 +285,7 @@ a {
     background-image: -o-linear-gradient(rgba(17, 17, 17, 0.7), rgb(17, 17, 17, 0.7)),  url('/images/bg-img.webp');
     background-image: linear-gradient(rgba(17, 17, 17, 0.7), rgb(17, 17, 17, 0.7)),  url('/images/bg-img.webp');
     background-repeat: no-repeat;
-    background-position: left top;
+    background-position: center;
     background-size: cover;
     background-attachment: fixed;
     -webkit-box-pack: center;
@@ -331,27 +331,28 @@ a {
 }
 
 .experiense {
-    position: absolute;
-    bottom: 20px;
-    left: -20px;
-    background-color: var(--color-green);
-    padding: 20px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    font-size: 20px;
-    color: var(--color-white);
-    -webkit-box-shadow: 0px 15px 40px -5px rgb(0 0 0 / 10%);
-            box-shadow: 0px 15px 40px -5px rgb(0 0 0 / 10%);
-    text-transform: capitalize;
-    border-radius: 5px;
-}
+        position: absolute;
+            bottom: 20px;
+                left: -20px;
+                    background-color: var(--color-green);
+                        padding: 20px;
+                            -webkit-box-sizing: border-box;
+                                        box-sizing: border-box;
+                                            font-size: 20px;
+                                                color: var(--color-white);
+                                                    -webkit-box-shadow: 0px 15px 40px -5px rgb(0 0 0 / 10%);
+                                                                box-shadow: 0px 15px 40px -5px rgb(0 0 0 / 10%);
+                                                                    text-transform: capitalize;
+                                                                        border-radius: 5px;
+                                                                        }
 
-.experiense span {
-    font-size: 40px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    display: inline-block;
-}
+                                                                        .experiense span {
+                                                                            font-size: 40px;
+                                                                                font-weight: 700;
+                                                                                    margin-bottom: 10px;
+                                                                                        display: inline-block;
+                                                                                        }
+
 
 .wrapper-founder {
    -webkit-box-align: center;
