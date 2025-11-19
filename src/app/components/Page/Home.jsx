@@ -14,6 +14,7 @@ import AOS from "aos"
 import "aos/dist/aos.css"
 import { useEffect } from "react";
 import Navbar from "../navbar/Navbar";
+import Sendmail from "../form/Sendmail";
 export default function HomePage() {
   useEffect(() => {
 AOS.init({
@@ -189,21 +190,8 @@ AOS.init({
           </div>
 
           <div className="wrapper-form">
-            <form>
-              <div className="wrapper-input flex">
-                <input type="text" name="name" placeholder="Name" />
-                <input type="text" name="lastname" placeholder="Last Name" />
-              </div>
-
-              <div className="wrapper-input flex">
-                <input type="text" name="phone" placeholder="Phone" />
-                <input type="text" name="email" placeholder="Email" />
-              </div>
-
-              <textarea name="message" placeholder="Message"></textarea>
-              <button id="send" type="submit">Submit Message</button>
-            </form>
-          </div>
+            <Sendmail/>
+           </div>
         </div>
 
         <div className="wrapper-map">
