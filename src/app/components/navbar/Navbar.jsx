@@ -14,7 +14,7 @@ export default function Navbar({position}) {
 
         {/* Logo */}
         <Link href="/" className="navbar-brand selected fw-bold fs-3">
-          <Image src="/images/logos.png" width={120} height={60} alt="Logo" />
+          <Image src="/images/logos.png" width={90} height={60} alt="Logo" />
         </Link>
 
         {/* Hamburger */}

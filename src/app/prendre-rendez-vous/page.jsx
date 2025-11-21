@@ -6,7 +6,7 @@ export default function RdvPage() {
     return<>
     <Navbar position={""}/>
     <div className="rdv d-flex justify-content-center align-items-center">
-        <h1 className="text-uppercase">Prendre <span className="selected">rendez</span>-vous</h1>
+        <h2 className="text-uppercase text-light">Prendre <span className="selected">rendez</span>-vous</h2>
     </div>
     <RdvForm/>
     <Footer/>

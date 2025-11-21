@@ -56,7 +56,7 @@ export default function RdvForm() {
   return (
     <div className="container my-5">
       <div className="card shadow-lg border-0 rounded-4 p-4 animate__animated animate__fadeIn">
-        <h3 className="text-center mb-4">Veuillez remplir ce formulaire</h3>
+        <h3 className="text-center mb-4">Veuillez remplir le formulaire</h3>
         <form onSubmit={handleSubmit} className="row g-3">
 
           {/* Nom */}
@@ -73,7 +73,7 @@ export default function RdvForm() {
           {/* Phone */}
           <div className="col-md-6">
             <label className="form-label">Numéro de tel</label>
-            <input type="tel" name="phone" className="form-control" required />
+            <input type="text" name="phone" className="form-control" required />
           </div>
           {/* Pays */}
           <div className="col-md-6">

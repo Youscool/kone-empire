@@ -63,7 +63,7 @@ AOS.init({
           <h1 className="align-center" data-aos="fade-up">
             <span className="selected">Meilleure</span> Agence <br /> de voyage au Mali
           </h1>
-          <Link href={"/prendre-rendez-vous"} className="btn btn-primary p-3">
+          <Link href={"/prendre-rendez-vous"} className="boutton">
              <i className="bi bi-calendar2-check me-2"></i>  Prendre Rendez-vous
           </Link>
         </div>
