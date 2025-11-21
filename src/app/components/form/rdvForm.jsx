@@ -6,13 +6,13 @@ import { useRouter } from "next/navigation";
 
 export default function RdvForm() {
   const [status, setStatus] = useState("");
-  const [clientType, setClientType] = useState("new");
+  const [clientType, setClientType] = useState("nouveau");
   const [variant, setVariant] = useState('')
   const [selectedDate, setSelectedDate] = useState(null);
   const router = useRouter()
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Envoi...");
+    setStatus("Envoi en cours...");
     
     const form = e.target;
     const time = form.time.value;
@@ -34,7 +34,7 @@ export default function RdvForm() {
         date: selectedDate ? selectedDate.toISOString().split("T")[0] : "",
         time,
         clientType,
-        lastRdv: clientType === "old" ? form.lastRdv.value : ""
+        lastRdv: clientType === "ancien" ? form.lastRdv.value : ""
       }),
     });
 
@@ -44,7 +44,7 @@ export default function RdvForm() {
       setStatus("✅ Rendez-vous envoyé avec succès !");
       setVariant("success")
       form.reset();
-      setClientType("new");
+      setClientType("nouveau");
       setSelectedDate(null);
       router.push("/")
     } else {
@@ -61,7 +61,7 @@ export default function RdvForm() {
 
           {/* Nom */}
           <div className="col-md-6">
-            <label className="form-label">Nom</label>
+            <label className="form-label">Nom complet</label>
             <input type="text" name="name" className="form-control" required />
           </div>
 
@@ -73,7 +73,7 @@ export default function RdvForm() {
           {/* Phone */}
           <div className="col-md-6">
             <label className="form-label">Numéro de tel</label>
-            <input type="text" name="phone" className="form-control" required />
+            <input type="tel" name="phone" className="form-control" required />
           </div>
           {/* Pays */}
           <div className="col-md-6">
@@ -89,9 +89,9 @@ export default function RdvForm() {
                 className="form-check-input"
                 type="radio"
                 name="clientType"
-                value="new"
-                checked={clientType === "new"}
-                onChange={() => setClientType("new")}
+                value="nouveau"
+                checked={clientType === "nouveau"}
+                onChange={() => setClientType("nouveau")}
               />
               <label className="form-check-label">Nouveau client</label>
             </div>
@@ -100,16 +100,16 @@ export default function RdvForm() {
                 className="form-check-input"
                 type="radio"
                 name="clientType"
-                value="old"
-                checked={clientType === "old"}
-                onChange={() => setClientType("old")}
+                value="ancien"
+                checked={clientType === "ancien"}
+                onChange={() => setClientType("ancien")}
               />
               <label className="form-check-label">Ancien client</label>
             </div>
           </div>
 
           {/* Date dernier RDV si ancien client */}
-          {clientType === "old" && (
+          {clientType === "ancien" && (
             <div className="col-md-12">
               <label className="form-label">Date du dernier rendez-vous</label>
               <input type="date" name="lastRdv" className="form-control" required />
@@ -123,10 +123,10 @@ export default function RdvForm() {
               selected={selectedDate}
               onChange={(date) => setSelectedDate(date)}
               className="form-control"
-              placeholderText="Sélectionnez une date"
+              placehancienerText="Sélectionnez une date"
               minDate={new Date()}
               required
-              dateFormat="yyyy-MM-dd"
+              dateFormat="dd-MM-yyyy"
             />
           </div>
 

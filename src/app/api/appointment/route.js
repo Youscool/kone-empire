@@ -13,7 +13,7 @@ export async function POST(req) {
     }
 
     // Vérification ancien client
-    if (clientType === "old" && (!lastRdv || lastRdv.length === 0)) {
+    if (clientType === "ancien" && (!lastRdv || lastRdv.length === 0)) {
       return Response.json(
         { ok: false, error: "Veuillez indiquer la date du dernier rendez-vous." },
         { status: 400 }
@@ -31,7 +31,7 @@ export async function POST(req) {
         date,
         time,
         clientType,
-        lastRdv: lastRdv || "néant"
+        lastRdv: lastRdv || "non défini"
       }),
     });
 
