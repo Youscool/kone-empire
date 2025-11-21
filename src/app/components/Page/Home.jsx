@@ -5,9 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 // React Icons
-import { FaBars, FaXmark, FaCheck, FaFacebookF, FaInstagram, FaYoutube, FaDribbble } from "react-icons/fa6";
-import { FaTwitter } from "react-icons/fa";
-import { FaPlus, FaMapMarkerAlt, FaPhone, FaClock } from "react-icons/fa";
+import { FaBars, FaCheck } from "react-icons/fa6";
+import { FaPlus } from "react-icons/fa";
 import CounterUp from "../sections/Counterup";
 // Librairie d'animation
 import AOS from "aos"
@@ -15,6 +14,7 @@ import "aos/dist/aos.css"
 import { useEffect } from "react";
 import Navbar from "../navbar/Navbar";
 import Sendmail from "../form/Sendmail";
+import Footer from "../Footer/Footer";
 export default function HomePage() {
   useEffect(() => {
 AOS.init({
@@ -48,7 +48,7 @@ AOS.init({
             <Image src="/images/logo.png" width={120} height={50} alt="Logo" />
           </Link>
 
-         <Navbar/>
+         <Navbar position={"fixed-top"}/>
 
           <Link id="openmenu" className="btn" href="#">
             <FaBars />
@@ -59,10 +59,13 @@ AOS.init({
       {/* ====== MAIN ====== */}
       <main>
         {/* Header Content */}
-        <div className="wrapper-header-img flex">
+        <div className="wrapper-header-img d-flex flex-column">
           <h1 className="align-center" data-aos="fade-up">
             <span className="selected">Meilleure</span> Agence <br /> de voyage au Mali
           </h1>
+          <Link href={"/prendre-rendez-vous"} className="btn btn-primary p-3">
+             <i className="bi bi-calendar2-check me-2"></i>  Prendre Rendez-vous
+          </Link>
         </div>
 
         {/* About Us */}
@@ -170,42 +173,7 @@ AOS.init({
       </main>
 
       {/* ====== Footer / Contact ====== */}
-      <footer id="contact">
-        <div className="container">
-          <h2>Contact</h2>
-        </div>
-
-        <div className="wrapper-contact-form container flex">
-          <div className="wrapper-contact">
-            <p><FaMapMarkerAlt /> Niamakoro cité UNICEF</p>
-            <p><a href="tel: +22370725566"><FaPhone /> (+223) 70-72-55-66</a></p>
-            <p><FaClock /> Nos horraires Lun–Ven: 8h00 - 16h00</p>
-
-            <ul className="footer-social">
-              <li><a href="#"><FaFacebookF /></a></li>
-              <li><a href="#"><FaTwitter /></a></li>
-              <li><a href="#"><FaInstagram /></a></li>
-              <li><a href="#"><FaYoutube /></a></li>
-            </ul>
-          </div>
-
-          <div className="wrapper-form">
-            <Sendmail/>
-           </div>
-        </div>
-
-        <div className="wrapper-map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18..."
-            style={{ border: 0 }}
-            loading="lazy"
-          ></iframe>
-        </div>
-
-        <div className="copyright align-center">
-          <p> © {new Date().getFullYear()} - Kone-Empire. Tous droits réservés.</p>
-        </div>
-      </footer>
+      <Footer/>
     </>
   );
 }

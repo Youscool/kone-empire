@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import "./globals.css";
 import "./responsive.css";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -19,12 +20,15 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Kone | Empire",
+  icons: { 
+    icon: "/logo.png"
+  },
   description: "Meilleure Agence de voyage au Mali",
   openGrah:{
     title: "Kone-Empire",
     description: "Site officiel de l'agence de voyage Kone-Empire",
     image: [{
-      url: "/image/logo.png",
+      url: "/logo.png",
       width: 800,
       height: 500
     }]
@@ -34,6 +38,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
+      <head><link rel="icon" href="/logo.png"/></head>
       <body className={`${poppins.variable}`}>
         {children}
       </body>

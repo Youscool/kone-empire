@@ -1,19 +1,20 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FaBars, FaXmark } from "react-icons/fa6";
 
-export default function Navbar() {
+export default function Navbar({position}) {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-3 shadow-sm fixed-top">
+    <nav className={`navbar navbar-expand-lg navbar-dark bg-dark py-3 shadow-sm ${position}`}>
       <div className="container">
 
         {/* Logo */}
-        <Link href="#home" className="navbar-brand selected fw-bold fs-3">
-          Kone-Empire
+        <Link href="/" className="navbar-brand selected fw-bold fs-3">
+          <Image src="/images/logos.png" width={120} height={60} alt="Logo" />
         </Link>
 
         {/* Hamburger */}
@@ -34,7 +35,7 @@ export default function Navbar() {
           <ul className="navbar-nav ms-auto text-center gap-lg-4 mt-3 mt-lg-0">
 
             <li className="nav-item">
-              <Link href="#home" className="nav-link">Home</Link>
+              <Link href="/" className="nav-link">Home</Link>
             </li>
 
             <li className="nav-item">

@@ -1,13 +1,14 @@
 "use client";
 import { useState } from "react";
 
-export default function Sendmail() {
-    const [loading, setLoading] = useState(false);
-    const [success, setSuccess] = useState(false);
+export default function ContactForm() {
+  const [loading, setLoading] = useState(false);
+  const [msg, setMsg] = useState("");
 
- const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setMsg("");
 
     const formData = {
       name: e.target.name.value,
@@ -25,29 +26,47 @@ export default function Sendmail() {
     setLoading(false);
 
     if (data.success) {
-      setSuccess(true);
+      setMsg("Message envoyé avec succès !");
       e.target.reset();
     } else {
-      alert("Erreur serveur : " + data.error);
+      setMsg(data.error || "Une erreur est survenue.");
     }
   };
-    return <>
 
-        <form onSubmit={handleSubmit}>
-            <div className="wrapper-input flex">
-                <input type="text" name="name" placeholder="Name" />
-                <input type="email" name="email" placeholder="Email" />
+  return (
+    <form onSubmit={handleSubmit} className="p-3">
 
-            </div>
+      <input
+        name="name"
+        placeholder="Nom"
+        maxLength={50}
+        className="form-control mb-3"
+        required
+      />
 
-            <textarea name="message" placeholder="Message"></textarea>
-            <button id="send" type="submit" disabled={loading}>
-                {loading? "Envoie en cours...": "Envoyer"}
-            </button>
-        </form>
-        {success && (
-            <p className="text-success mt-3">Message envoyé avec succès !</p>
-        )}
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        maxLength={100}
+        className="form-control mb-3"
+        required
+      />
 
-    </>
+      <textarea
+        name="message"
+        placeholder="Votre message"
+        maxLength={500}
+        minLength={5}
+        className="form-control mb-3"
+        required
+      />
+
+      <button className="btn btn-primary w-100" disabled={loading}>
+        {loading ? "Envoi..." : "Envoyer"}
+      </button>
+
+      {msg && <p className="mt-3">{msg}</p>}
+    </form>
+  );
 }
