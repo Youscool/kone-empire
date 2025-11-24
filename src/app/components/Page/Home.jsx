@@ -26,17 +26,17 @@ AOS.init({
     {
       id: 1,
       title: "Assistance Visa",
-      detail: "lorem upsum",
+      detail: "Avec notre expertise dans le domaine, nous facilitons l'obtention des visas",
     },
     {
       id: 2,
       title: "Réservation billet",
-      detail: "lorem upsum",
+      detail: "Nous faisons aussi la réservation des billets d'avions et d'hotels pour votre plus grand plaisir",
     },
     {
       id: 3,
       title: "Hadj & Oumrah",
-      detail: "lorem upsum",
+      detail: "Pour une expérience inédite à la Mecque, confiez nous la programmation de vos voyage pour le Hadj & Oumrah",
     }
   ]
   return (
