@@ -72,16 +72,16 @@ AOS.init({
         <section id="aboutus" className="ptb" data-aos="fade-right" data-aos-delay="200">
           <div className="wrapper-aboutus container flex">
             <div className="aboutus-img">
-              <Image src="/images/portfolio-5.webp" width={500} height={800} className="img-fluid rounded" alt="About us" />
+              <Image src="/images/about-img.jpg" width={500} height={800} className="img-fluid rounded" alt="About us" />
               <div className="experiense align-center">
-                <span className="counter">12</span>
+                <span className="counter">+12</span>
                 <p>ans <br /> D'experience</p>
               </div>
             </div>
 
             <div className="aboutus-content" data-aos="fade-left" data-aos-delay="800">
               <h2>À propos</h2>
-              <p>Chez <span className="selected fw-bold">Kone Empire</span>, nous accompagnons
+              <p>Chez <span className="selected fw-bold">Agence de voyage</span>, nous accompagnons
                 chaque voyageur avec professionnalisme, transparence et sérénité.<br />
                 Spécialisés dans <span className="fw-bold">l'assistance visa</span>, la <span className="fw-bold">réservation de billets d'avion,</span>
                 la <span className="fw-bold">réservation d'hotels,</span> ansi que l'organisation de <span className="fw-bold">Hadj et Oumrah,</span>
@@ -89,9 +89,9 @@ AOS.init({
               </p>
 
               <div className="wrapper-founder flex">
-                <Image src="/images/founder.webp" width={100} height={100} alt="Founder" />
+                <Image src="/images/pdg.jpg" width={100} height={100} alt="Founder" />
                 <div>
-                  <h3>Yacinthe Koné</h3>
+                  <h3>Kabako Dev</h3>
                   <p>PDG</p>
                 </div>
               </div>
@@ -124,7 +124,7 @@ AOS.init({
 
           <div className="wrapper-portfolio container">
             <div className="row grid flex popup-gallery">
-              {[1, 2, 3, 4, 5].map(i => (
+              {[1, 2, 3].map(i => (
                 <div className="col-12 col-md-6 col-lg-3 element-item" key={i}>
                   <Link href={`/images/portfolio-${i}.webp`} className="w-100 h-100">
                     <Image
