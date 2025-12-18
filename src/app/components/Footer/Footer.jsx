@@ -12,8 +12,8 @@ export default function Footer() {
     
             <div className="wrapper-contact-form container flex">
               <div className="wrapper-contact">
-                <p><FaMapMarkerAlt /> Niamakoro cité UNICEF</p>
-                <p><a href="tel: +22370725566"><FaPhone /> (+223) 70-72-55-66</a></p>
+                <p><FaMapMarkerAlt /> Bamako - Mali</p>
+                <p><a href="tel: +22370725566"><FaPhone /> (+223) 11-11-11-11</a></p>
                 <p><FaClock /> Nos horraires Lun–Ven: 8h00 - 16h00</p>
     
                 <ul className="footer-social">
@@ -38,7 +38,7 @@ export default function Footer() {
             </div>
     
             <div className="copyright align-center">
-              <p> © {new Date().getFullYear()} - Kone-Empire. Tous droits réservés.</p>
+              <p> © {new Date().getFullYear()} - Agence de voyage. Tous droits réservés.</p>
             </div>
           </footer>
     </>

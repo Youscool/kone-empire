@@ -19,20 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Kone | Empire",
-  icons: { 
-    icon: "/logo.png"
-  },
+  title: "Agence | Voyage",
   description: "Meilleure Agence de voyage au Mali",
-  openGrah:{
-    title: "Kone-Empire",
-    description: "Site officiel de l'agence de voyage Kone-Empire",
-    image: [{
-      url: "/logo.png",
-      width: 800,
-      height: 500
-    }]
-  }
 };
 
 export default function RootLayout({ children }) {

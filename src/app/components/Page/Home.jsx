@@ -126,9 +126,9 @@ AOS.init({
             <div className="row grid flex popup-gallery">
               {[1, 2, 3].map(i => (
                 <div className="col-12 col-md-6 col-lg-3 element-item" key={i}>
-                  <Link href={`/images/portfolio-${i}.webp`} className="w-100 h-100">
+                  <Link href={`/images/portfolio-${i}.jpg`} className="w-100 h-100">
                     <Image
-                      src={`/images/portfolio-${i}.webp`}
+                      src={`/images/portfolio-${i}.jpg`}
                       width={400}
                       height={400}
                       style={{ objectFit: "cover" }}
