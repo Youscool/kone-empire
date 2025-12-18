@@ -21,7 +21,7 @@ export default function ContactForm() {
     const res = await fetch("/api/send-email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(formData),git 
     });
 
     const data = await res.json();
