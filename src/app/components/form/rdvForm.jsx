@@ -13,7 +13,7 @@ export default function RdvForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("Envoi en cours...");
-    
+    setVariant('info')
     const form = e.target;
     const time = form.time.value;
 
@@ -46,7 +46,6 @@ export default function RdvForm() {
       form.reset();
       setClientType("nouveau");
       setSelectedDate(null);
-      router.push("/")
     } else {
       setStatus("❌ " + data.error);
       setVariant("danger")

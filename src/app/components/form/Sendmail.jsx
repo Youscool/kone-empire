@@ -1,9 +1,11 @@
 "use client";
 import { useState } from "react";
+import FlashMessage from "../FlashMessage/FlashMessage";
 
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [msg, setMsg] = useState("");
+    const [variant, setVariant] = useState('')
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,9 +29,11 @@ export default function ContactForm() {
 
     if (data.success) {
       setMsg("Message envoyé avec succès !");
+      setVariant("success")
       e.target.reset();
     } else {
       setMsg(data.error || "Une erreur est survenue.");
+      setVariant("danger")
     }
   };
 
@@ -66,7 +70,7 @@ export default function ContactForm() {
         {loading ? "Envoi..." : "Envoyer"}
       </button>
 
-      {msg && <p className="mt-3">{msg}</p>}
+      {msg && <FlashMessage message={msg} variant={variant} onClose={() => setMsg("")} />}
     </form>
   );
 }
